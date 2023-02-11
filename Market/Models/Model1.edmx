@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="description" Type="nchar" MaxLength="10" />
         </EntityType>
@@ -17,12 +17,12 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="description" Type="nchar" MaxLength="10" />
           <Property Name="categoryID" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Table__categoryI__25869641">
+        <Association Name="FK__Product__categor__398D8EEE">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
           <End Role="Product" Type="Self.Product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -37,7 +37,7 @@
         <EntityContainer Name="MyMarketModelStoreContainer">
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Table__categoryI__25869641" Association="Self.FK__Table__categoryI__25869641">
+          <AssociationSet Name="FK__Product__categor__398D8EEE" Association="Self.FK__Product__categor__398D8EEE">
             <End Role="Category" EntitySet="Category" />
             <End Role="Product" EntitySet="Product" />
           </AssociationSet>

@@ -1,0 +1,22 @@
+
+
+
+@baseUrl=http://localhost:63331/api
+
+@service=Products
+
+get {{baseUrl}}/{{service}}
+
+###
+
+###
+
+post {{baseUrl}}/{{service}}
+content-type: application/json
+
+{
+  "name": "cat1",
+  "description": "ad2",
+    }
+
+###
