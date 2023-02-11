@@ -2,4 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/*
+/.vs
+/packages
+/Market/obj
+/Market/bin
+/Market/App_Data
+/Market/database
